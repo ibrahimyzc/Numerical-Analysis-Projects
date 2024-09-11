@@ -37,13 +37,14 @@ where $\mathbf{u} = - \mathbf{K} \nabla p$ is the Darcy velocity, computed from 
 ## Problem Setup
 
 Solve the problem in the domain $\Omega = (0, 1) \times (0, 1)$ with the following parameters:
+
 - $\alpha = 1$, $f = 0$
 - Use $g(x, y) = 1 - x$ as the pressure boundary condition to create flow from left to right.
 
 The permeability tensor $\mathbf{K}$ is defined as:
 
 $$
-\mathbf{K}(x, y) = 
+\mathbf{K}(x, y) =
 \begin{cases} 
 0.0001, & 0.4 \leq x \leq 0.6 \\
 1, & \text{otherwise}
@@ -51,14 +52,17 @@ $$
 $$
 
 The initial condition for the transport equation is a contaminant plume:
+
 $$
 c_0(x, y) = \exp\left(-100 \left( (x - 0.2)^2 + (y - 0.5)^2 \right)\right)
 $$
 
-### Simulation Parameters
+## Simulation Parameters
+
 - Mesh size: $h = 1/40$
 - Time step: $\Delta t = 0.01$
 - Final time: $t = 1$
+
 
 ## Tasks
 
