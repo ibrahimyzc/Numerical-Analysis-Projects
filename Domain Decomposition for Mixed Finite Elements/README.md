@@ -81,9 +81,8 @@ $$
 100, & 0 < x, y < 1/2 \\
 1, & \text{otherwise}
 \end{cases}
-
-f = 0$, $g = (1 - x)|_{\partial \Omega}.
 $$
+and $f = 0$, $g = (1 - x)|_{\partial \Omega}.$
 
 
 
