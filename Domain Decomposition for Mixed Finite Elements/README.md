@@ -9,17 +9,13 @@ In this part, we aim to understand and implement basic domain decomposition meth
 
 ### Steps
 
-1. **Study the Domain Decomposition Methods**:
-   - Read Section 5.8 on Domain Decomposition in the Freefem++ manual.
-   - Understand the methods and the example codes.
-
-2. **Run Example Codes**:
+1. **Run Example Codes**:
    - Run the following examples in `examples/tutorial/`:
      - `schwarz-overlap.edp`
      - `schwarz-no-overlap.edp`
      - `schwarz-gc.edp`
 
-3. **Modify the Schwarz-overlap.edp**:
+2. **Modify the Schwarz-overlap.edp**:
    - Add a convergence criterion to the code. Use `schwarz-b.edp` from `examples/mpi/schwarz-b.edp` as a reference for how to implement this.
    - Modify the convergence tolerance to `1e-2` and set the maximum number of iterations to 500:
 
@@ -30,7 +26,7 @@ In this part, we aim to understand and implement basic domain decomposition meth
    - Run the code for `n = 4, 8, 16, 32`, and report the number of iterations versus `n`. Discuss the results.
    - Submit the modified code.
 
-4. **Modify the Schwarz-gc.edp**:
+3. **Modify the Schwarz-gc.edp**:
    - Change the LinearCG tolerance to `1e-6` and set the maximum number of iterations to 500:
 
    ```cpp
@@ -40,7 +36,7 @@ In this part, we aim to understand and implement basic domain decomposition meth
    - Run the code for `n = 4, 8, 16, 32`. Report the number of iterations and discuss the results.
    - Change the tolerance to `1e-2` and ensure the results are consistent with `schwarz-overlap.edp`.
 
-5. **Run Additional Tests**:
+4. **Run Additional Tests**:
    - Run the code for `n = 4, 8, 16, 32` and report the results.
 
 ## Part II: Domain Decomposition for Mixed Finite Elements
