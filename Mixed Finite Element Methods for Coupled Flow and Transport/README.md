@@ -73,10 +73,13 @@ $$
 ### 2. Run a Modified Simulation Using Galerkin FEM
 
 - Use the Galerkin finite element method (continuous P1 elements) for computing the velocity.
+
 - Define the velocity elements as:
-  $$ 
-  \text{vel1} = -K \cdot \frac{\partial p}{\partial x}, \quad \text{vel2} = -K \cdot \frac{\partial p}{\partial y}
-  $$
+
+$$
+\text{vel1} = -K \cdot \frac{\partial p}{\partial x}, \quad \text{vel2} = -K \cdot \frac{\partial p}{\partial y}
+$$
+
 - Ensure that the velocity vectors are in the continuous P1 space so that they are compatible with the `convect` function.
 
 ### 3. Compare Mixed FEM and Galerkin FEM Methods
