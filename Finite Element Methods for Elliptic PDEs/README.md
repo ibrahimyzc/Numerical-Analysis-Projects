@@ -6,11 +6,11 @@ This project involves writing and implementing a finite element code to solve an
 
 We aim to solve the PDE of the form:
 
-$$ -\nabla \cdot (a(x, y) \nabla u) + b(x, y)u = f(x, y), \quad \text{in} \ \Omega = (0, 1)^2 $$
+$$ -\nabla \cdot (a(x, y) \nabla u) + b(x, y) u = f(x, y), \quad \text{in} \ \Omega = (0, 1)^2 $$
 
 subject to the boundary condition:
 
-$$ u = g(x, y), \quad \text{on} \ \partial\Omega $$
+$$ u = g(x, y), \quad \text{on} \ \partial \Omega $$
 
 where $a(x, y)$, $b(x, y)$, $f(x, y)$, and $g(x, y)$ are given functions. We use continuous piecewise linear basis functions on a triangular grid, obtained by partitioning $\Omega$ with a rectangular grid and then dividing each rectangle into two triangles.
 
@@ -31,11 +31,12 @@ The finite element method (FEM) was used to approximate the solution $u(x, y)$ b
 2. **ii)** $a(x, y) = \frac{1}{1 + 10(x^2 + y^2)}$, $b(x, y) = 0$
 
 ### Case B: True solution
+
 $$
 p(x, y) =
 \begin{cases} 
 x^2 y^3 + \cos(xy), & 0 \leq x \leq 1/2 \\
-((2x + 9)/20)y^3 + \cos(((2x + 9)/20)y), & 1/2 \leq x \leq 1
+\left(\frac{2x + 9}{20}\right)y^3 + \cos\left(\frac{2x + 9}{20} y\right), & 1/2 \leq x \leq 1
 \end{cases}
 $$
 
@@ -77,3 +78,4 @@ The computed solutions are plotted for each case and compared against the true s
 - The finite element method accurately approximates the true solutions for each of the test cases.
 - The error in $H^1$ and $L^2$ norms is calculated for each level of mesh refinement, demonstrating convergence as the mesh is refined.
 - The results confirm that as the mesh is refined, the finite element solution approaches the true solution, with decreasing error.
+
