@@ -24,7 +24,6 @@ In this part, we aim to understand and implement basic domain decomposition meth
    ```
 
    - Run the code for `n = 4, 8, 16, 32`, and report the number of iterations versus `n`. Discuss the results.
-   - Submit the modified code.
 
 3. **Modify the Schwarz-gc.edp**:
    - Change the LinearCG tolerance to `1e-6` and set the maximum number of iterations to 500:
@@ -64,7 +63,7 @@ using mixed finite element methods with RT0 spaces.
 
 3.  **Run Test Problems**:
 
-    Run the problems from Project 2:
+    Run the problems from the project `Mixed Finite Element Methods for Flow `:
 
 - **Case 1**: $p(x, y) = x^3 + y^3$ in $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$ and $\mathbf{K} = 1$.
 
