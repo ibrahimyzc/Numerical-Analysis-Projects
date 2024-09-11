@@ -50,25 +50,10 @@ where $R = \frac{a}{\epsilon}$ (known as the Peclet number).
 ## How to Run the Code
 
 1. Download the MATLAB files included in the repository:
-   - `shooting_method.m`
-   - `symmetric_finite_diff_method.m`
-   - `upwind_finite_diff_method.m`
 
 2. Adjust the parameters inside the script files to vary the step size or modify the values of $\epsilon$ and $a$.
 
 3. Run the scripts in MATLAB to generate the plots for different methods and step sizes.
-
-## Results and Discussion
-
-- The methods were compared in terms of stability and convergence, and their performance was analyzed with respect to the true solution.
-- The shooting method converged well for all cases, while the upwind method showed better stability for smaller $\epsilon$.
-
-## Files Included
-
-- `shooting_method.m` - MATLAB script for solving the problem using the shooting method.
-- `symmetric_finite_diff_method.m` - MATLAB script for solving using the symmetric finite difference method.
-- `upwind_finite_diff_method.m` - MATLAB script for solving using the upwind finite difference method.
-- `plots/` - Folder containing the generated plots for each method and step size.
 
 ## Conclusion
 
