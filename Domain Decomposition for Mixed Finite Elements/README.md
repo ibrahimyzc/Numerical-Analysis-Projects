@@ -64,7 +64,7 @@ using mixed finite element methods with RT0 spaces.
 
 3.  **Run Test Problems**:
 
-Run the problems from Project 2:
+    Run the problems from Project 2:
 
 - **Case 1**: $p(x, y) = x^3 + y^3$ in $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$ and $\mathbf{K} = 1$.
 
@@ -85,9 +85,8 @@ $$
 - $f = 0$, $g = (1 - x)|_{\partial \Omega}$.
 
 
-4. **Analyze Results**:
-   - In all cases, take the interface along $x = 0.5$. For the overlapping algorithm, use an overlap of $1/10$.
-   - Run the code for mesh refinements: $h = 1/10, 1/20, 1/40, 1/80$. Report the number of iterations versus $h$ and discuss the results.
 
-5. **Submit Your Code**:
-   - Ensure the modified codes are submitted with your results and discussions.
+## How to Run the Code
+
+1. Install **Freefem++**: Follow the [Freefem++ installation guide](https://freefem.org/) if needed.
+2. Run each case in **Freefem++** and observe the solutions and error analysis.
