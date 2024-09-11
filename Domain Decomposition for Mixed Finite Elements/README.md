@@ -62,22 +62,28 @@ using mixed finite element methods with RT0 spaces.
    - In `schwarz-overlap.edp`, change the convergence tolerance to `1e-2` and set the maximum number of iterations to 500.
    - In `schwarz-gc.edp`, change the LinearCG tolerance to `1e-6` and the maximum number of iterations to 500.
 
-3. **Run Test Problems**:
-   - Run the problems from Project 2:
+3.  **Run Test Problems**:
 
-     - **Case 1**: $p(x, y) = x^3 + y^3$ in $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$ and $\mathbf{K} = 1$.
-     - **Case 2**: Same as above, except $\mathbf{K}(x, y) = \frac{1}{1 + 10(x^2 + y^2)}$.
-     - **Case 3**: $\Omega$ is an L-shaped domain obtained by removing the upper-right quarter from the unit square. Parameters: $\alpha = 1$, $\mathbf{K} = 1$, $f = 1$, $g = 0$.
-     - **Case 4**: $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$, and
+Run the problems from Project 2:
 
-       $$
-       \mathbf{K} = \begin{cases}
-       100, & 0 < x, y < 1/2 \\
-       1, & \text{otherwise}
-       \end{cases}
-       $$
+- **Case 1**: $p(x, y) = x^3 + y^3$ in $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$ and $\mathbf{K} = 1$.
 
-     - $f = 0$, $g = (1 - x)|_{\partial \Omega}$.
+- **Case 2**: Same as above, except $\mathbf{K}(x, y) = \frac{1}{1 + 10(x^2 + y^2)}$.
+
+- **Case 3**: $\Omega$ is an L-shaped domain obtained by removing the upper-right quarter from the unit square. Parameters: $\alpha = 1$, $\mathbf{K} = 1$, $f = 1$, $g = 0$.
+
+- **Case 4**: $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$, and
+
+$$
+\mathbf{K} = 
+\begin{cases} 
+100, & 0 < x, y < 1/2 \\
+1, & \text{otherwise}
+\end{cases}
+$$
+
+- $f = 0$, $g = (1 - x)|_{\partial \Omega}$.
+
 
 4. **Analyze Results**:
    - In all cases, take the interface along $x = 0.5$. For the overlapping algorithm, use an overlap of $1/10$.
