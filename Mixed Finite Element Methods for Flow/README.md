@@ -56,6 +56,7 @@ $$
    - For each case, estimate the convergence rate for the finite element errors in:
      - $\|p - p_h\|_{L^2(\Omega)}$
      - $\|u - u_h\|_{L^2(\Omega)}$
+     - $\|\nabla \cdot (u - u_h)\|_{L^2(\Omega)}$
    - Run the code for four levels of refinement starting with $h = 1/10$. 
    - In Case 3 and Case 4, use the computed solution with $h = 1/160$ as the true solution for error calculation. Discuss the results.
 
