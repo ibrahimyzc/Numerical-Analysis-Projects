@@ -92,16 +92,10 @@ $$
 ## How to Run the Code
 
 1. Install **Freefem++**: Follow the [Freefem++ installation guide](https://freefem.org/) if needed.
-2. Write the Freefem++ code for both the flow and transport problems as described.
-3. Set up the parameters and mesh for the problem.
-4. Use the `convect` function for the transport equation.
-5. Visualize the results for both the mixed FEM and Galerkin FEM methods.
+2. Run each case in **Freefem++** and observe the solution plots and error analysis.
+3. Visualize the results for both the mixed FEM and Galerkin FEM methods.
 
 
 ## Conclusion
 
-This project demonstrates the application of the mixed finite element method and the Galerkin finite element method for solving coupled flow and transport problems. The comparison between the two methods provides insights into the quality of velocity and contaminant transport simulation under different discretization techniques.
-
----
-
-You can modify this `README.md` as needed based on your specific implementation. Let me know if you need further assistance!
+This project demonstrates the application of the mixed finite element method and the Galerkin finite element method for solving coupled flow and transport problems. The comparison between the two methods provides insights into the quality of velocity and contaminant transport simulation under different discretization techniques. 
