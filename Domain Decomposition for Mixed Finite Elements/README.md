@@ -83,7 +83,7 @@ $$
 \end{cases}
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;$f = 0$, &nbsp;$g = (1 - x)|_{\partial \Omega}$.
+&nbsp;&nbsp;&nbsp;&nbsp;$f = 0$, &nbsp;&nbsp;$g = (1 - x)|_{\partial \Omega}$.
 
 
 ## How to Run the Code
