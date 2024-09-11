@@ -78,7 +78,7 @@ using mixed finite element methods with RT0 spaces.
 $$
 \mathbf{K} = 
 \begin{cases} 
-100, & 0 < x, y < 1/2 \\
+100, & 0 < x, y < 1/2 \text{ and } 1/2 < x, y < 1, \\
 1, & \text{otherwise}
 \end{cases}
 $$
