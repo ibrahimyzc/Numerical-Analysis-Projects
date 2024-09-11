@@ -7,16 +7,19 @@ This project aims to simulate coupled flow and transport using the mixed finite 
 The goal is to solve the following system of equations:
 
 1. **Flow Equation**:
-   $$ 
-   \alpha p - \nabla \cdot (\mathbf{K} \nabla p) = f \quad \text{in} \ \Omega \subset \mathbb{R}^2, \quad p = g \ \text{on} \ \partial \Omega 
-   $$
+
+$$
+\alpha p - \nabla \cdot (\mathbf{K} \nabla p) = f \quad \text{in} \ \Omega \subset \mathbb{R}^2, \quad p = g \ \text{on} \ \partial \Omega
+$$
 
 2. **Transport Equation**:
-   $$ 
-   \frac{\partial c}{\partial t} + \mathbf{u} \cdot \nabla c = 0, \quad c(x, y, 0) = c_0(x, y)
-   $$
 
-   where $\mathbf{u} = -\mathbf{K} \nabla p$ is the Darcy velocity, computed from the flow equation.
+$$
+\frac{\partial c}{\partial t} + \mathbf{u} \cdot \nabla c = 0, \quad c(x, y, 0) = c_0(x, y)
+$$
+
+where $\mathbf{u} = - \mathbf{K} \nabla p$ is the Darcy velocity, computed from the flow equation.
+
 
 ## Steps
 
