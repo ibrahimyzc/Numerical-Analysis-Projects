@@ -40,13 +40,19 @@ x^2 y^3 + \cos(xy), & 0 \leq x \leq 1/2 \\
 \end{cases}
 $$
 
-- $a(x, y) =
+For the coefficients $a(x, y)$ and $b(x, y)$:
+
+$$
+a(x, y) =
 \begin{cases} 
 1, & 0 \leq x \leq 1/2 \\
-10, & 1/2 < x \leq 1 
-\end{cases}$
+10, & 1/2 < x \leq 1
+\end{cases}
+$$
 
-- $b(x, y) = 0$
+$$
+b(x, y) = 0
+$$
 
 ### Boundary and Forcing Functions
 
