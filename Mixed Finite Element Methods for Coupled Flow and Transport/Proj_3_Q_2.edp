@@ -1,0 +1,37 @@
+int n=40;
+mesh Th=square(n,n);
+
+fespace Vh(Th,P1);
+Vh p, w;
+fespace Phc(Th,P1);
+
+Phc c, c0 = exp(-100*((x-0.2)^2 +(y-0.5)^2));
+Phc vel1, vel2;
+real alpha = 1;
+real dt=0.01, t=0;
+func gd =1-x;
+func f = 0;
+
+func K = (9999.*((x>(0.4) & x<(0.6)) & (y>(0.4) & y<(0.6))))/(-10000)+1;
+
+problem hwp2(p,w,solver=LU) =
+   int2d(Th)( K*dx(p)*dx(w) + K*dy(p)*dy(w))
+ + int2d(Th) ((alpha*p*w))
+ - int2d(Th) ((f*w))
+ + on(1, 2, 3, 4, p=gd);
+
+hwp2;
+vel1=-K*dx(p);
+vel2=-K*dy(p);
+
+for (int m=0; m<1/dt ; m++) {
+t += dt;
+c=convect([vel1,vel2],-dt,c0);
+c0=c; 
+plot(c,cmm=" t="+t + ", min=" + c[].min + ", max=" + c[].max,wait=0);
+}
+
+plot(c,cmm=" t="+t + ", min=" + c[].min + ", max=" + c[].max,wait=true);
+plot(c,fill=1,wait=1,ps="laRTc.eps",value=true);
+plot([vel1,vel2],coef=0.1,wait=1,ps="lapRTuv.eps",value=true); 
+plot(p,fill=1,wait=1,ps="laRTp.eps",value=true);
