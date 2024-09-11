@@ -12,22 +12,6 @@ $$
 
 where $\alpha$, $f$, and $g$ are given functions, and $\mathbf{K}$ is the permeability tensor.
 
-## Steps
-
-1. **Run the demo**  
-   - Start by running the example `LaplaceRT.edp` located in `examples/tutorial` in **Freefem++**. 
-   - Understand how the RT0 finite element space is used in the code. You can refer to the **Freefem++** manual for detailed information about the RT0 space.
-
-2. **Modify the Solver**  
-   - Replace the GMRES solver option with the LU solver in the demo. GMRES is less efficient for large-scale problems. 
-   - Remove all GMRES-related parameters from the calling sequence.
-
-3. **Explore Additional Examples**  
-   - Look at `examples/misc/aaRT.edp` for more examples on using RT0 spaces in Freefem++.
-
-4. **Create a User Code**  
-   - Write a new Freefem++ script for solving the problem using the mixed finite element method with RT0 spaces. 
-
 ## Test Cases
 
 Run your code for the following test cases:
@@ -79,30 +63,11 @@ $$
    - Plot the computed pressure and velocity fields.
    - Plot the pressure error for $h = 1/40$. Comment on the distribution of the error.
 
-3. **Submit Code**  
-   - Ensure your code is well-documented and includes any necessary comments.
-
 ## How to Run the Code
 
-1. Install **Freefem++** if you haven’t already: [Freefem++ installation guide](https://freefem.org/)
-2. Modify the provided Freefem++ scripts (`LaplaceRT.edp` or `aaRT.edp`) for each test case described above.
+1. Install **Freefem++**: [Freefem++ installation guide](https://freefem.org/)
 3. Run each case in **Freefem++** and observe the solution plots and error analysis.
-4. Document your results and submit your code along with a report.
-
-## Files Included
-
-- `LaplaceRT.edp` - Example Freefem++ script (from the tutorial)
-- `aaRT.edp` - Another Freefem++ example for RT0 spaces
-- `user_code_case1.edp` - Freefem++ code for Case 1
-- `user_code_case2.edp` - Freefem++ code for Case 2
-- `user_code_case3.edp` - Freefem++ code for Case 3
-- `user_code_case4.edp` - Freefem++ code for Case 4
-- `plots/` - Folder containing plots of pressure, velocity, and error distributions for each test case.
 
 ## Conclusion
 
 This project implements the mixed finite element method using RT0 elements and estimates the convergence of the method in terms of the $L^2$ norm errors. The computed pressure and velocity fields are analyzed for multiple test cases with varying permeability distributions, including a case with discontinuous permeability.
-
----
-
-You can adjust this template as needed based on your specific implementation. Let me know if you need any further assistance!
