@@ -1,0 +1,78 @@
+verbosity=2;
+real cpu=clock();
+int inside = 2; 
+int outside = 1;
+
+border a(t=0.5,1){x=t;y=0;label=outside;};
+border b(t=0,1){x=1;y=t;label=outside;};
+border c(t=1,0.5){x=t ;y=1;label=outside;};
+border d(t=1,0){x=0.5; y = t;label=inside;};
+border e(t=0,1){x=0.5; y = t;label=inside;};
+border f(t=0.5,0){x=t ;y=1;label=outside;};
+border g(t=1,0){x=0 ;y=t;label=outside;};
+border h(t=0,0.5){x=t ;y=0;label=outside;};
+
+int n=80;
+mesh rth = buildmesh( a(n/2) + b(n) + c(n/2) + d(n));
+mesh lth = buildmesh ( e(n) + f(n/2) +g(n)+h(n/2));
+plot(rth,lth,wait=1);
+
+real alpha = 1;
+func gd = x^3 + y^3;
+func ff = x^3 + y^3 -(6*x+6*y);
+func K=1;
+
+fespace rvh(rth,RT0);
+fespace rph(rth,P0);
+fespace lvh(lth,RT0);
+fespace lph(lth,P0);
+
+lvh [lu1,lu2],[lv1,lv2];
+lph lp,lw;
+rvh [ru1,ru2],[rv1,rv2],[lambda1,lambda2],[r1,r2];
+rph rp,rw;
+
+int i=0;  
+
+problem lprob([lu1,lu2,lp],[lv1,lv2,lw],init=i,solver=LU,eps=-1.0e-6) = 
+    int2d(lth)( (1/K)*lu1*lv1 + (1/K)*lu2*lv2 - lp*(dx(lv1)+dy(lv2)))
+  + int2d(lth) ((alpha*lp*lw)+(dx(lu1)+dy(lu2))*lw)
+  + int1d(lth,outside)( gd*(lv1*N.x +lv2*N.y))
+  + int1d(lth,inside)( lambda1*(lv1*N.x +lv2*N.y))
+  - int2d(lth)(ff*lw)
+  //+ on(outside,lp= gd ) 
+  ;
+  
+problem rprob([ru1,ru2,rp],[rv1,rv2,rw],init=i,solver=LU,eps=-1.0e-6) = 
+    int2d(rth)( (1/K)*ru1*rv1 + (1/K)*ru2*rv2 - rp*(dx(rv1)+dy(rv2)))
+  + int2d(rth) ((alpha*rp*rw)+(dx(ru1)+dy(ru2))*rw)
+  + int1d(rth,outside)( gd*(rv1*N.x +rv2*N.y))
+  + int1d(rth,inside)( lambda1*(rv1*N.x +rv2*N.y))
+  - int2d(rth)(ff*rw)
+  //+ on(outside,rp= gd ) 
+  ;
+  
+varf bb([lu1,lu2],[lv1,lv2],solver=CG) =int1d(rth,inside)(lu1*lv1);
+matrix B= bb(rvh,rvh,solver=CG);
+
+func real[int] BoundaryProblem(real[int] &l)
+{ 
+   lambda1[]=l;
+   rprob; 
+   lprob;
+   i++;
+   [r1,r2] = [lu1-ru1,0];
+   lambda1[]=B*r1[];
+   return lambda1[] ;
+};
+
+rph p=0,q=0; 
+
+LinearCG(BoundaryProblem,p[],q[],eps=1.e-6,nbiter=500);
+
+BoundaryProblem(p[]); // solve again  to have right u1,u2
+cout << " -- CPU time  schwarz-gc:" <<  clock()-cpu << endl;
+
+cout <<" n = " << n << endl;
+
+plot(lp,rp,fill=1,ps="laRTp.eps",value=true);
