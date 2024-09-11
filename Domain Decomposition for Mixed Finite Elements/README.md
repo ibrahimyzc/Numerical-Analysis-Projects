@@ -87,6 +87,7 @@ $$
 
 
 
+
 ## How to Run the Code
 
 1. Install **Freefem++**: Follow the [Freefem++ installation guide](https://freefem.org/) if needed.
