@@ -58,11 +58,11 @@ $$
      - $\|u - u_h\|_{L^2(\Omega)}$
      - $\|\nabla \cdot (u - u_h)\|_{L^2(\Omega)}$
    - Run the code for four levels of refinement starting with $h = 1/10$. 
-   - In Case 3 and Case 4, use the computed solution with $h = 1/160$ as the true solution for error calculation. Discuss the results.
+   - In Case 3 and Case 4, use the computed solution with $h = 1/160$ as the true solution for error calculation.
 
 2. **Plot Results**  
    - Plot the computed pressure and velocity fields.
-   - Plot the pressure error for $h = 1/40$. Comment on the distribution of the error.
+   - Plot the pressure error for $h = 1/40$. 
 
 ## How to Run the Code
 
@@ -71,4 +71,4 @@ $$
 
 ## Conclusion
 
-This project implements the mixed finite element method using RT0 elements and estimates the convergence of the method in terms of the $L^2$ norm errors. The computed pressure and velocity fields are analyzed for multiple test cases with varying permeability distributions, including a case with discontinuous permeability.
+This project implements the mixed finite element method using RT0 elements and estimates the convergence of the method. The computed pressure and velocity fields are analyzed for multiple test cases with varying permeability distributions, including a case with discontinuous permeability.
