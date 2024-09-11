@@ -1,0 +1,48 @@
+int n=80;
+mesh Th=square(n,n);
+
+int m=160;
+mesh Thex=square(m,m);
+
+fespace Vh(Th,RT0);
+fespace Ph(Th,P0);
+fespace Vhex(Thex,RT0);
+fespace Phex(Thex,P0);
+
+real alpha = 1;
+func gd =1-x;
+func f = 0;
+
+func K = 99.*((x>0 & x<(0.5)) & (y>0 & y<(0.5)))+99.*((x>0.5 & x<1) & (y>0.5 & y<1))+1;
+
+Vh [u1,u2],[v1,v2];
+Ph p,w,pp,err; 
+Vhex [u1ex,u2ex],[v1ex,v2ex];
+Phex pex,wex; 
+
+problem hwp1([u1,u2,p],[v1,v2,w],solver=LU,eps=-1.0e-6) =
+   int2d(Th)( p*w*1e-15+ (1/K)*u1*v1 + (1/K)*u2*v2 - p*(dx(v1)+dy(v2)))
+ + int2d(Th) ((alpha*p*w)+(dx(u1)+dy(u2))*w)
+ + int1d(Th)( gd*(v1*N.x +v2*N.y))
+ - int2d(Th)(f*w);
+ 
+problem hwp1ex([u1ex,u2ex,pex],[v1ex,v2ex,wex],solver=LU,eps=-1.0e-6) =
+   int2d(Thex)( pex*wex*1e-15+ (1/K)*u1ex*v1ex + (1/K)*u2ex*v2ex - pex*(dx(v1ex)+dy(v2ex)))
+ + int2d(Thex) ((alpha*pex*wex)+(dx(u1ex)+dy(u2ex))*wex)
+ + int1d(Thex)( gd*(v1ex*N.x +v2ex*N.y))
+ - int2d(Thex)(f*wex);
+
+hwp1;
+hwp1ex;
+plot([u1,u2],coef=0.1,wait=1,ps="lapRTuv.eps",value=true); 
+plot(p,fill=1,wait=1,ps="laRTp.eps",value=true);
+pp=pex;
+err = abs(pp - p);
+plot(err,fill=1,wait=1,ps="laRTp.eps",value=true);
+
+real errorppp = sqrt(int2d(Th)((pex-p)^2));
+real erroruuu = sqrt(int2d(Th)((u1ex-u1)^2+(u2ex-u2)^2));
+real errordiv = sqrt(int2d(Th)((dx(u1ex)+dy(u2ex)-dx(u1)-dy(u2))^2));
+cout << "errorppp = " << errorppp << endl;
+cout << "erroruuu = " << erroruuu << endl;
+cout << "errordiv = " << errordiv << endl;
