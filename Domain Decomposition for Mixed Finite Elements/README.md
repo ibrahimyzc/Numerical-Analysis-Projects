@@ -46,16 +46,17 @@ This part focuses on applying domain decomposition algorithms for mixed finite e
 
 ### Steps
 
-1. **Modify the Schwarz Methods for Mixed Finite Elements**:
-   - Using the templates from the modified `schwarz-overlap.edp` and `schwarz-gc.edp` from Part I, write two-subdomain overlapping Schwarz and non-overlapping Shur-complement based codes for solving:
+## 1. Modify the Schwarz Methods for Mixed Finite Elements:
 
-   $$
-   \alpha p - \nabla \cdot (\mathbf{K} \nabla p) = f \quad \text{in} \ \Omega \subset \mathbb{R}^2, \quad p = g \ \text{on} \ \partial \Omega
-   $$
+- Using the templates from the modified `schwarz-overlap.edp` and `schwarz-gc.edp` from Part I, write two-subdomain overlapping Schwarz and non-overlapping Shur-complement based codes for solving:
 
-   using mixed finite element methods with RT0 spaces.
+$$
+\alpha p - \nabla \cdot (\mathbf{K} \nabla p) = f \quad \text{in} \ \Omega \subset \mathbb{R}^2, \quad p = g \ \text{on} \ \partial \Omega
+$$
 
-   - In the `schwarz-gc.edp`, modify the `BoundaryProblem` function to solve local Dirichlet problems and iterate to match fluxes.
+using mixed finite element methods with RT0 spaces.
+
+- In the `schwarz-gc.edp`, modify the `BoundaryProblem` function to solve local Dirichlet problems and iterate to match fluxes.
 
 2. **Change Convergence Criteria**:
    - In `schwarz-overlap.edp`, change the convergence tolerance to `1e-2` and set the maximum number of iterations to 500.
