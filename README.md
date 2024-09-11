@@ -11,7 +11,7 @@ This project explores overlapping and non-overlapping domain decomposition algor
 This project focuses on solving boundary value problems using different finite difference methods, including the shooting method, symmetric finite difference, and upwind finite difference methods.
 
 ### 3. Finite Element Methods for Elliptic PDEs
-Here, we use finite element methods to solve elliptic partial differential equations (PDEs) on structured grids. The code is implemented using MATLAB, with a focus on error analysis and convergence properties.
+Here, we use finite element methods to solve elliptic differential equations on structured grids. The code is implemented using MATLAB, with a focus on error analysis and convergence properties.
 
 ### 4. Mixed Finite Element Methods for Coupled Flow and Transport
 This project solves coupled flow and transport problems using mixed finite element methods (MFE) in FreeFEM++. It includes Darcy flow computation and contaminant transport simulations.
