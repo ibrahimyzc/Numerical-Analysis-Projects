@@ -25,7 +25,7 @@ This project involves solving flow equations using mixed finite element methods.
 
 ## Project Files
 
-- **Domain Decomposition for Mixed Finite Elements/**: Contains FreeFEM++ code and documentation for domain decomposition methods.
+- **Domain Decomposition for Mixed Finite Elements/**: Contains the code and documentation for domain decomposition methods.
 - **Finite Difference Methods/**: Includes MATLAB code and plots for finite difference methods.
 - **Finite Element Methods for Elliptic PDEs/**: MATLAB code for solving elliptic PDEs using finite element methods.
 - **Mixed Finite Element Methods for Coupled Flow/**: FreeFEM++ code for solving coupled flow and transport problems.
