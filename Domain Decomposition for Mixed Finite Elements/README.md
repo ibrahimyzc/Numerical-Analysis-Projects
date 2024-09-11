@@ -45,7 +45,7 @@ This part focuses on applying domain decomposition algorithms for mixed finite e
 
 ### Steps
 
-## 1. Modify the Schwarz Methods for Mixed Finite Elements:
+ 1. **Modify the Schwarz Methods for Mixed Finite Elements**:
 
 - Using the templates from the modified `schwarz-overlap.edp` and `schwarz-gc.edp` from Part I, write two-subdomain overlapping Schwarz and non-overlapping Shur-complement based codes for solving:
 
