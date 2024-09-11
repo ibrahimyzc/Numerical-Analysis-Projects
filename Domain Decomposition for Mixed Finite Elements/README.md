@@ -67,7 +67,8 @@ using mixed finite element methods with RT0 spaces.
 
 - **Case 1**: $p(x, y) = x^3 + y^3$ in $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$ and $\mathbf{K} = 1$.
 
-- **Case 2**: Same as above, except $$\mathbf{K}(x, y) = \frac{1}{1 + 10(x^2 + y^2)}$$.
+- **Case 2**: Same as above, except
+  $$\mathbf{K}(x, y) = \frac{1}{1 + 10(x^2 + y^2)}$$.
 
 - **Case 3**: $\Omega$ is an L-shaped domain obtained by removing the upper-right quarter from the unit square. Parameters: $\alpha = 1$, $\mathbf{K} = 1$, $f = 1$, $g = 0$.
 
@@ -81,7 +82,7 @@ $$
 \end{cases}
 $$
 
-  $f = 0$, $g = (1 - x)|_{\partial \Omega}$.
+      $f = 0$, $g = (1 - x)|_{\partial \Omega}$.
 
 
 
