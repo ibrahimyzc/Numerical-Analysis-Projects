@@ -82,5 +82,4 @@ The computed solutions are plotted for each case and compared against the true s
 
 - The finite element method accurately approximates the true solutions for each of the test cases.
 - The error in $H^1$ and $L^2$ norms is calculated for each level of mesh refinement, demonstrating convergence as the mesh is refined.
-- The results confirm that as the mesh is refined, the finite element solution approaches the true solution, with decreasing error.
 
