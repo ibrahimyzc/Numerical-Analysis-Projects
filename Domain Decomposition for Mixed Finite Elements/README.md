@@ -83,7 +83,7 @@ $$
 \end{cases}
 $$
 
-   $f = 0$, $g = (1 - x)|_{\partial \Omega}$.
+&nbsp;&nbsp;&nbsp;&nbsp;$f = 0$, $g = (1 - x)|_{\partial \Omega}$.
 
 
 
