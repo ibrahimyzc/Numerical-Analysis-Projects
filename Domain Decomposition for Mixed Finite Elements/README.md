@@ -73,7 +73,7 @@ using mixed finite element methods with RT0 spaces.
 
 - **Case 3**: $\Omega$ is an L-shaped domain obtained by removing the upper-right quarter from the unit square. Parameters: $\alpha = 1$, $\mathbf{K} = 1$, $f = 1$, $g = 0$.
 
-- **Case 4**: $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$, and
+- **Case 4**: $\Omega = (0, 1) \times (0, 1)$ with $\alpha = 1$, $f = 0$, $g = (1 - x)|_{\partial \Omega}$, and
 
 $$
 \mathbf{K} = 
@@ -82,8 +82,6 @@ $$
 1, & \text{otherwise}
 \end{cases}
 $$
-
-&nbsp;&nbsp;&nbsp;&nbsp;$f = 0$, &nbsp;&nbsp;$g = (1 - x)|_{\partial \Omega}$.
 
 
 ## How to Run the Code
