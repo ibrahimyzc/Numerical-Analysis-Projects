@@ -42,7 +42,7 @@ $$
 p(x, y) =
 \begin{cases} 
 x^2 y^3 + \cos(xy), & 0 \leq x \leq 1/2 \\
-\left(\frac{2x + 9}{20}\right)y^3 + \cos\left(\frac{(2x + 9)}{20} y\right), & 1/2 \leq x \leq 1
+\left(\frac{2x + 9}{20}\right)^2 y^3 + \cos\left(\frac{(2x + 9)}{20} y\right), & 1/2 \leq x \leq 1
 \end{cases}
 $$
 
