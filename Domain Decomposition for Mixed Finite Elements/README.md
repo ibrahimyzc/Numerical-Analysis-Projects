@@ -83,6 +83,10 @@ $$
 \end{cases}
 $$
 
+4. **Analyze Results**:
+   - In all cases, take the interface along $x = 0.5$. For the overlapping algorithm, use an overlap of $1/10$.
+   - Run the code for mesh refinements: $h = 1/10, 1/20, 1/40, 1/80$. Report the number of iterations versus $h$.
+
 
 ## How to Run the Code
 
