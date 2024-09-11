@@ -1,4 +1,4 @@
-# Finite Element Solution of Elliptic PDEs
+# Finite Element Methods for Elliptic PDEs
 
 This project involves writing and implementing a finite element code to solve an elliptic partial differential equation (PDE) using continuous piecewise linear basis functions on a triangular grid. The project includes solving several problems with varying coefficients and calculating the error estimates for different mesh refinements.
 
@@ -74,18 +74,9 @@ The computed solutions are plotted for each case and compared against the true s
 
 ## How to Run the Code
 
-1. Download and run the provided code in your chosen programming language.
+1. Download and run the provided code in Matlab.
 2. Adjust the parameters as needed for grid refinement and test cases.
 3. The solutions for the above test cases will be computed and plotted.
-4. Ensure the boundary conditions and source terms match the problem definitions.
-
-## Files Included
-
-- `finite_element_solver.m` - Main script for solving the elliptic PDE using finite element method.
-- `test_case_A1.m` - Solves Case A (i) with $a(x, y) = 1$, $b(x, y) = 1$.
-- `test_case_A2.m` - Solves Case A (ii) with variable $a(x, y)$ and $b(x, y) = 0$.
-- `test_case_B.m` - Solves Case B with piecewise defined $a(x, y)$.
-- `plots/` - Folder containing generated plots for different mesh refinements.
 
 ## Results and Discussion
 
