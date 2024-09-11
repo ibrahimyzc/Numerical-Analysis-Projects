@@ -21,7 +21,7 @@ where \( \epsilon \ll 1 \) and \( a \) are constants. The true solution of the p
 
 $$ u(t) = \frac{1 - e^{Rt}}{1 - e^R} $$
 
-where $ R = \frac{a}{\epsilon} $ (known as the Peclet number).
+where $$ R = \frac{a}{\epsilon} $$ (known as the Peclet number).
 
 ### Numerical Methods Implemented:
 1. **Shooting Method**
