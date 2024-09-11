@@ -1,4 +1,4 @@
-# Finite Element Methods for Elliptic PDEs
+# Finite Element Solution of Elliptic PDEs
 
 This project involves writing and implementing a finite element code to solve an elliptic partial differential equation (PDE) using continuous piecewise linear basis functions on a triangular grid. The project includes solving several problems with varying coefficients and calculating the error estimates for different mesh refinements.
 
@@ -36,14 +36,16 @@ $$
 p(x, y) =
 \begin{cases} 
 x^2 y^3 + \cos(xy), & 0 \leq x \leq 1/2 \\
-\left(\frac{2x + 9}{20}\right)y^3 + \cos\left(\frac{2x + 9}{20} y\right), & 1/2 \leq x \leq 1
+\left(\frac{2x + 9}{20}\right)y^3 + \cos\left(\frac{(2x + 9)}{20} y\right), & 1/2 \leq x \leq 1
 \end{cases}
 $$
 
-- $a(x, y) = \begin{cases} 
+- $a(x, y) =
+\begin{cases} 
 1, & 0 \leq x \leq 1/2 \\
 10, & 1/2 < x \leq 1 
-\end{cases}$, 
+\end{cases}$
+
 - $b(x, y) = 0$
 
 ### Boundary and Forcing Functions
