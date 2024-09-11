@@ -27,8 +27,13 @@ The finite element method (FEM) was used to approximate the solution $u(x, y)$ b
 ## Test Cases
 
 ### Case A: True solution $p(x, y) = \sin(\pi x)\sin(\pi y)$
+
 1. **i)** $a(x, y) = 1$, $b(x, y) = 1$
-2. **ii)** $a(x, y) = \frac{1}{1 + 10(x^2 + y^2)}$, $b(x, y) = 0$
+
+2. **ii)** 
+$$
+a(x, y) = \frac{1}{1 + 10(x^2 + y^2)}, \quad b(x, y) = 0
+$$
 
 ### Case B: True solution
 
